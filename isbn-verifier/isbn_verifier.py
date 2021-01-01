@@ -15,7 +15,7 @@ def is_valid(isbn):
             if char == "X" and countdown == 1:
                 char = 10
             elif char == "X" and countdown != 1:
-                return False
+                return False 
             total += int(char) * countdown
             countdown -= 1
     return not total % 11
