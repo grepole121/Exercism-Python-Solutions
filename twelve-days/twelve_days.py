@@ -6,7 +6,7 @@ nth = {
     5: "fifth",
     6: "sixth",
     7: "seventh",
-    8: "eigth",
+    8: "eighth",
     9: "ninth",
     10: "tenth",
     11: "eleventh",
@@ -15,7 +15,7 @@ nth = {
 
 gifts = [
     "a Partridge in a Pear Tree.",
-    "two Turtle Doves, ",
+    "two Turtle Doves, and ",
     "three French Hens, ",
     "four Calling Birds, ",
     "five Gold Rings, ",
@@ -30,10 +30,10 @@ gifts = [
 
 
 def recite(start_verse, end_verse):
+    song = []
     for i in range(start_verse,end_verse+1):
-        print(f"\nOn the {nth[i]} day of Christmas my true love gave to me: ", end = '')
+        verse = f"On the {nth[i]} day of Christmas my true love gave to me: "
         for gift in range (0,i):
-            if(i-gift == 1) and (i != 1):
-                print("and ", end = '')
-            print(f"{gifts[i-gift-1]}", end = '')
-    return
+            verse += f"{gifts[i-gift-1]}"
+        song.append(verse)
+    return song
