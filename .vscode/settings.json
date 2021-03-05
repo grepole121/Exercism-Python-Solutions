@@ -1,0 +1,8 @@
+{
+    "python.testing.pytestArgs": [
+        "difference-of-squares"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
+}
