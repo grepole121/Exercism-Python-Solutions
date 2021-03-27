@@ -7,12 +7,11 @@ scores = {
     "jx": 8,
     "qz": 10
 }
+scores_dict = {}
+for letters, value in scores.items():
+    for letter in letters:
+        scores_dict[letter] = value
 
 
 def score(word):
-    result = 0
-    for char in word.lower():
-        for letters, value in scores.items():
-            if char in letters:
-                result += value
-    return result
+    return sum(scores_dict[char] for char in word.lower())
